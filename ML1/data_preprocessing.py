@@ -10,7 +10,6 @@ print(x)
 print(y)
 
 
-
 from sklearn.impute import SimpleImputer
 imputer = SimpleImputer(missing_values=np.nan, strategy='mean')       #filling up the misssing values
 imputer.fit(x[:,1:3])
