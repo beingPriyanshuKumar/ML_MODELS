@@ -20,6 +20,3 @@ X_train = sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
 # Apply the transform to the test set
 
-# Print the scaled training and test datasets
-print("Scaled training set:\n", X_train) 
-print("Scaled test set:\n", X_test)
