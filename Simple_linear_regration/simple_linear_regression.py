@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 # Importing the dataset
-df = pd.read_csv('Salary_Data.csv')
+df = pd.read_csv('D:\PROJECTS\ML\ML_MODELS\Simple_linear_regration\Salary_Data.csv')
 X = df.iloc[:, :-1].values
 y = df.iloc[:, -1].values
     
