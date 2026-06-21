@@ -16,13 +16,13 @@ from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 corpus = []
 for i in range(0, 1000):
-  review = re.sub('[^a-zA-Z]', ' ', dataset['Review'][i])
-  review = review.lower()
-  review = review.split()
-  ps = PorterStemmer()
+  review = re.sub('[^a-zA-Z]', ' ', dataset['Review'][i])# saare faltu words ko remove kiya 
+  review = review.lower()# saare leteres ko lower kiya
+  review = review.split() #humne words ko split kiya 
+  ps = PorterStemmer() #this is for capturing the root of the statement
   all_stopwords = stopwords.words('english')
-  all_stopwords.remove('not')
-  review = [ps.stem(word) for word in review if not word in set(all_stopwords)]
+  all_stopwords.remove('not') #humara program not ko bhi chor de raha tha isilye phle hi humne stopwords se not ko hata diya #these are like some basic words jo hum remove krte ahi taki humara matrix zayada bada na bane (words like a, an the .......)
+  review = [ps.stem(word) for word in review if not word in set(all_stopwords)] #review column mein humne saaare stopwords ko hata diya
   review = ' '.join(review)
   corpus.append(review)
 print(corpus)
